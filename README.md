@@ -15,7 +15,7 @@ For example, from within `component.js`, running `:Spec` will attempt to switch 
 
 ## Limitations
 
-Toggle Spec currently only works with Git projects.
+Toggle Spec currently only works within Git projects.
 
 ## License
 
