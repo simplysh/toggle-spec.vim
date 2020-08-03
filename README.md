@@ -3,7 +3,7 @@ Quickly jump to spec file from your source.
 
 ## Introduction
 
-**Toggle Spec** is a pure vimscript plug-in which allows you to quickly open the test file of the current buffer. It works with any extension, and supports both `.spec` and `.test` naming conventions.
+**Toggle Spec** is a pure vimscript plug-in which allows you to quickly open the test file of the current buffer. It works with any extension, and supports both `.spec.` and `.test.` naming conventions.
 
 Toggle Spec will recursively search for files within your entire project, by using your `.git` folder as the project root.
 
