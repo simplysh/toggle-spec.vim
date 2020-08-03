@@ -3,9 +3,9 @@ Quickly jump to spec file from your source.
 
 ## Introduction
 
-toggle-spec is lightweight, zero-dependencies plug-in which allows you to quickly open the test file of the current buffer. It works with any extension, and supports both `.spec` and `.test` naming conventions.
+**Toggle Spec** is lightweight, zero-dependencies plug-in which allows you to quickly open the test file of the current buffer. It works with any extension, and supports both `.spec` and `.test` naming conventions.
 
-toggle-spec will recursively search for files within your entire project, by using your `.git` folder as the project root.
+Toggle Spec will recursively search for files within your entire project, by using your `.git` folder as the project root.
 
 ## Usage
 
