@@ -8,8 +8,16 @@ function! Spec(bang)
     return
   endif
 
+  " read all the top-level directories
+  let l:base = fnamemodify(l:root, ':h:h')
+  let l:dirs = join(filter(globpath(l:base, '*', 0, 1), {_, name -> isdirectory(name)}), ',')
+
   " find all spec files
-  let l:files = glob(fnamemodify(l:root, ':h') . '/**/*' . expand('%:r') . '.{spec,test}.' . expand('%:e'), 1, 1)
+  " only recurse through toplevel directories
+  let l:files = globpath(l:base, expand('%:r') . '.test.' . expand('%:e'), 0, 1)
+        \+ globpath(l:base, expand('%:r') . '.spec.' . expand('%:e'), 0, 1)
+        \+ globpath(l:dirs, '**/' . expand('%:r') . '.test.' . expand('%:e'), 0, 1)
+        \+ globpath(l:dirs, '**/' . expand('%:r') . '.spec.' . expand('%:e'), 0, 1)
 
   if empty(l:files)
     echohl Error | echo 'No spec' | echohl None
