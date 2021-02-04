@@ -21,4 +21,4 @@ Toggle Spec currently only works within Git projects.
 
 [MIT](LICENSE)
 
-Based on original code by [Andy Massimino](https://github.com/andymass).
+Based on original code by [Andy Massimino](https://vi.stackexchange.com/a/24682/28745).
